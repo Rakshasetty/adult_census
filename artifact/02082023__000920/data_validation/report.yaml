@@ -1,0 +1,65 @@
+data_drift_within_test_dataset:
+  age:
+    pvalues: 0.6273708539285388
+    same_distribution: true
+  country:
+    pvalues: 0.999999996522114
+    same_distribution: true
+  education:
+    pvalues: 0.9750808790296531
+    same_distribution: true
+  hours-per-week:
+    pvalues: 0.9733054037410315
+    same_distribution: true
+  marital-status:
+    pvalues: 0.9999999999965866
+    same_distribution: true
+  occupation:
+    pvalues: 0.9989425133662397
+    same_distribution: true
+  race:
+    pvalues: 0.9984194996123672
+    same_distribution: true
+  relationship:
+    pvalues: 0.9997550127487311
+    same_distribution: true
+  sex:
+    pvalues: 1.0
+    same_distribution: true
+  workclass:
+    pvalues: 0.9999999892933842
+    same_distribution: true
+data_drift_within_train_dataset:
+  age:
+    pvalues: 0.9999760473069896
+    same_distribution: true
+  country:
+    pvalues: 1.0
+    same_distribution: true
+  education:
+    pvalues: 0.9999999999999523
+    same_distribution: true
+  hours-per-week:
+    pvalues: 0.9999951561849403
+    same_distribution: true
+  marital-status:
+    pvalues: 0.9997404766884129
+    same_distribution: true
+  occupation:
+    pvalues: 0.9999998832592505
+    same_distribution: true
+  race:
+    pvalues: 0.9999999998800772
+    same_distribution: true
+  relationship:
+    pvalues: 1.0
+    same_distribution: true
+  sex:
+    pvalues: 1.0
+    same_distribution: true
+  workclass:
+    pvalues: 1.0
+    same_distribution: true
+missing_values_within_base_dataset: []
+missing_values_within_test_dataset: []
+missing_values_within_train_dataset: []

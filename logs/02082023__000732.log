@@ -1,0 +1,56 @@
+[ 2023-02-08 00:07:34,164 ] 16 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-02-08 00:07:34,165 ] 23 root - INFO - Exporting collection data as pandas dataframe
+[ 2023-02-08 00:07:34,165 ] 21 root - INFO - Reading data from database: Adult_Census and collection: Adult
+[ 2023-02-08 00:07:35,748 ] 23 root - INFO - Found columns: Index(['_id', 'age', 'workclass', 'fnlwgt', 'education', 'education-num',
+       'marital-status', 'occupation', 'relationship', 'race', 'sex',
+       'capital-gain', 'capital-loss', 'hours-per-week', 'country', 'salary'],
+      dtype='object')
+[ 2023-02-08 00:07:35,748 ] 25 root - INFO - Dropping column: _id 
+[ 2023-02-08 00:07:35,769 ] 27 root - INFO - Row and columns in df: (65122, 15)
+[ 2023-02-08 00:07:35,788 ] 29 root - INFO - Save data in feature store
+[ 2023-02-08 00:07:44,387 ] 51 root - INFO - Create feature store folder if not available
+[ 2023-02-08 00:07:44,387 ] 55 root - INFO - Save df to feature store folder
+[ 2023-02-08 00:07:44,742 ] 60 root - INFO - split dataset into train and test set
+[ 2023-02-08 00:07:44,791 ] 64 root - INFO - create dataset directory folder if not available
+[ 2023-02-08 00:07:44,792 ] 69 root - INFO - Save df to feature store folder
+[ 2023-02-08 00:07:45,294 ] 81 root - INFO - Data ingestion artifact: DataIngestionArtifact(feature_store_file_path='/config/workspace/artifact/02082023__000734/data_ingestion/feature_store/adult.csv', train_file_path='/config/workspace/artifact/02082023__000734/data_ingestion/dataset/train.csv', test_file_path='/config/workspace/artifact/02082023__000734/data_ingestion/dataset/test.csv')
+[ 2023-02-08 00:07:45,325 ] 26 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-02-08 00:07:45,326 ] 113 root - INFO - Reading base dataframe
+[ 2023-02-08 00:07:45,429 ] 116 root - INFO - Replace na value in base df
+[ 2023-02-08 00:07:49,832 ] 160 root - INFO - Drop null values colums from base df
+[ 2023-02-08 00:07:49,834 ] 48 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-02-08 00:07:49,835 ] 51 root - INFO - Columns to drop: []
+[ 2023-02-08 00:07:49,836 ] 165 root - INFO - Reading train dataframe
+[ 2023-02-08 00:07:50,004 ] 187 root - INFO - Reading test dataframe
+[ 2023-02-08 00:07:50,055 ] 207 root - INFO - Drop null values colums from train df
+[ 2023-02-08 00:07:50,057 ] 48 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-02-08 00:07:50,058 ] 51 root - INFO - Columns to drop: []
+[ 2023-02-08 00:07:50,059 ] 209 root - INFO - Drop null values colums from test df
+[ 2023-02-08 00:07:50,061 ] 48 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-02-08 00:07:50,061 ] 51 root - INFO - Columns to drop: []
+[ 2023-02-08 00:07:50,077 ] 221 root - INFO - Is all required columns present in train df
+[ 2023-02-08 00:07:50,077 ] 223 root - INFO - Is all required columns present in test df
+[ 2023-02-08 00:07:50,077 ] 227 root - INFO - As all column are available in train df hence detecting data drift
+[ 2023-02-08 00:07:50,077 ] 91 root - INFO - Hypothesis workclass: float64, float64 
+[ 2023-02-08 00:07:50,122 ] 91 root - INFO - Hypothesis education: float64, float64 
+[ 2023-02-08 00:07:50,164 ] 91 root - INFO - Hypothesis marital-status: float64, float64 
+[ 2023-02-08 00:07:50,171 ] 91 root - INFO - Hypothesis occupation: float64, float64 
+[ 2023-02-08 00:07:50,178 ] 91 root - INFO - Hypothesis relationship: float64, float64 
+[ 2023-02-08 00:07:50,219 ] 91 root - INFO - Hypothesis race: float64, float64 
+[ 2023-02-08 00:07:50,260 ] 91 root - INFO - Hypothesis sex: float64, float64 
+[ 2023-02-08 00:07:50,264 ] 91 root - INFO - Hypothesis country: float64, float64 
+[ 2023-02-08 00:07:50,303 ] 91 root - INFO - Hypothesis age: float64, float64 
+[ 2023-02-08 00:07:50,311 ] 91 root - INFO - Hypothesis hours-per-week: float64, float64 
+[ 2023-02-08 00:07:50,318 ] 230 root - INFO - As all column are available in test df hence detecting data drift
+[ 2023-02-08 00:07:50,318 ] 91 root - INFO - Hypothesis workclass: float64, float64 
+[ 2023-02-08 00:07:50,339 ] 91 root - INFO - Hypothesis education: float64, float64 
+[ 2023-02-08 00:07:50,343 ] 91 root - INFO - Hypothesis marital-status: float64, float64 
+[ 2023-02-08 00:07:50,362 ] 91 root - INFO - Hypothesis occupation: float64, float64 
+[ 2023-02-08 00:07:50,366 ] 91 root - INFO - Hypothesis relationship: float64, float64 
+[ 2023-02-08 00:07:50,370 ] 91 root - INFO - Hypothesis race: float64, float64 
+[ 2023-02-08 00:07:50,372 ] 91 root - INFO - Hypothesis sex: float64, float64 
+[ 2023-02-08 00:07:50,391 ] 91 root - INFO - Hypothesis country: float64, float64 
+[ 2023-02-08 00:07:50,410 ] 91 root - INFO - Hypothesis age: float64, float64 
+[ 2023-02-08 00:07:50,415 ] 91 root - INFO - Hypothesis hours-per-week: float64, float64 
+[ 2023-02-08 00:07:50,418 ] 234 root - INFO - Write reprt in yaml file
+[ 2023-02-08 00:07:50,425 ] 239 root - INFO - Data validation artifact: DataValidationArtifact(report_file_path='/config/workspace/artifact/02082023__000734/data_validation/report.yaml')
