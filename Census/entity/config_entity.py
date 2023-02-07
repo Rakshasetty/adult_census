@@ -9,6 +9,7 @@ TEST_FILE_NAME = "test.csv"
 TRANSFORMER_OBJECT_FILE_NAME = "transformer.pkl"
 TARGET_ENCODER_OBJECT_FILE_NAME = "target_encoder.pkl"
 INPUT_FEATURE_ENCODER_OBJECT_FILE_NAME = "input_target_encoder.pkl"
+MODEL_FILE_NAME = "model.pkl"
 
 
 
@@ -61,4 +62,10 @@ class DataTransformationConfig:
         self.target_encoder_path = os.path.join(self.data_transformation_dir,"target_encoder",TARGET_ENCODER_OBJECT_FILE_NAME)
         self.input_feature_encoder_path= os.path.join(self.data_transformation_dir,"input_feature_encoder",INPUT_FEATURE_ENCODER_OBJECT_FILE_NAME)
 
-    
+class ModelTrainerConfig:
+
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.model_trainer_dir = os.path.join(training_pipeline_config.artifact_dir , "model_trainer")
+        self.model_path = os.path.join(self.model_trainer_dir,"model",MODEL_FILE_NAME)
+        self.expected_score = 0.7
+        self.overfitting_threshold = 0.2   
