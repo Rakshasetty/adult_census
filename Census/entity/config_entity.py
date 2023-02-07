@@ -39,4 +39,6 @@ class DataIngestionConfig:
             return self.__dict__
         except Exception  as e:
             raise SensorException(e,sys)     
+
+
     

@@ -20,3 +20,5 @@ Census/components/model_trainer.py
 Census/entity/__init__.py
 Census/entity/artifact_entity.py
 Census/entity/config_entity.py
+Census/pipeline/__init__.py
+Census/pipeline/training_pipeline.py
