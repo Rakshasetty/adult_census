@@ -4,6 +4,7 @@ Census/__init__.py
 Census/config.py
 Census/exception.py
 Census/logger.py
+Census/predictor.py
 Census/utils.py
 Census.egg-info/PKG-INFO
 Census.egg-info/SOURCES.txt
